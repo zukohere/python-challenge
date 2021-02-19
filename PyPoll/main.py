@@ -41,9 +41,9 @@ with open(csvpath, newline='') as csvfile:
     print(f"-------------------------")
 
     output_file = os.path.join("Analysis","PyPoll_Analysis.txt")
-    #with the path and "a" meaning append as "datafile", print to "datafile"
-    #Note: All new runs of program will add to text file.
-    with open(output_file,"a") as datafile:  
+    #Text file print statement here (path, filename)
+    #Note: All new runs of program will overwrite text file.
+    with open(output_file,"w") as datafile:
         print(f"Election Results",file = datafile)
         print(f"-------------------------",file = datafile)
         print(f"Total Votes: {sum(Votes)}",file = datafile)
